@@ -19,9 +19,14 @@ namespace Lab2
         public double Task2(int n, double x)
         {
             double answer = 0;
-
+            int step = 1;
             // code here
-
+            for (int i; i < n; i++)
+            {
+                answer += step;
+                
+                step = 1/x;
+            }
             // end
 
             return answer;
