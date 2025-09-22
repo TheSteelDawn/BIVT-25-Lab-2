@@ -95,6 +95,7 @@
             for (int i = 0; i < answer.Length; i++)
             {
                 test[i] = _main.Task4(input[i]);
+                System.Console.WriteLine(test[i]);
             }
             // Assert
             for (int i = 0; i < answer.Length; i++)
@@ -113,6 +114,7 @@
             for (int i = 0; i < answer.Length; i++)
             {
                 test[i] = _main.Task5(input[i]);
+                System.Console.WriteLine(test[i]);
             }
             // Assert
             for (int i = 0; i < answer.Length; i++)
@@ -131,6 +133,7 @@
             for (int i = 0; i < answer.Length; i++)
             {
                 test[i] = _main.Task6(input[i]);
+                System.Console.WriteLine(test[i]);
             }
             // Assert
             for (int i = 0; i < answer.Length; i++)
@@ -181,6 +184,7 @@
             for (int i = 0; i < answer.Length; i++)
             {
                 test[i] = _main.Task8(input[0, i], input[1, i], input[2, i]);
+                System.Console.WriteLine(test[i]);
             }
             // Assert
             for (int i = 0; i < answer.Length; i++)
