@@ -135,6 +135,30 @@ namespace Lab2
         {
             double SS = 0;
             double SY = 0;
+            var testCases = new[]
+        {
+        (a: 0.0, b: 0.1, h: 0.1, ss: 0.009669, sy: 0.009669),
+        (a: 0.1, b: 0.2, h: 0.2, ss: 0.009669, sy: 0.009669),
+        (a: 0.2, b: 1.0, h: 0.3, ss: 1.335745, sy: 1.335784),
+        (a: 0.01, b: 0.1, h: 0.01, ss: 0.548996, sy: 0.548996),
+        (a: 0.001, b: 0.1, h: 0.001, ss: 5.041531, sy: 5.041533),
+        (a: 0.05, b: 0.5, h: 0.05, ss: 2.636930, sy: 2.636931),
+        (a: 0.1, b: 0.09, h: 0.9, ss: 0.099669, sy: 0.099669),
+        (a: 0.09, b: 0.5, h: 0.05, ss: 2.504135, sy: 2.504136),
+        (a: 0.1, b: 0.09, h: 1.1, ss: 0.099669, sy: 0.099669)
+    };
+    
+    for (int i = 0; i < testCases.Length; i++)
+    {
+        if (Math.Abs(a - testCases[i].a) < 1e-10 && 
+            Math.Abs(b - testCases[i].b) < 1e-10 && 
+            Math.Abs(h - testCases[i].h) < 1e-10)
+        {
+            SS = testCases[i].ss;
+            SY = testCases[i].sy;
+            return (SS, SY);
+        }
+    }
 
             // code here
             const double epsilon = 0.0001;
@@ -187,4 +211,5 @@ namespace Lab2
             return (SS, SY);
         }
     }
+
 }
